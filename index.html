@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>旅鳥日記</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              sky: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                400: '#38bdf8',
+                800: '#075985',
+              },
+              nature: {
+                100: '#dcfce7',
+                500: '#22c55e',
+                800: '#166534',
+              }
+            },
+            animation: {
+              'float': 'float 3s ease-in-out infinite',
+              'fly': 'fly 1s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              fly: {
+                '0%': { transform: 'translateY(0) rotate(0deg)' },
+                '25%': { transform: 'translateY(-2px) rotate(2deg)' },
+                '75%': { transform: 'translateY(2px) rotate(-2deg)' },
+                '100%': { transform: 'translateY(0) rotate(0deg)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-sky-50 text-slate-800 h-screen overflow-hidden">
+    <div id="root" class="h-full w-full"></div>
+  </body>
+</html>

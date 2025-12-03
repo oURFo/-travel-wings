@@ -1,0 +1,7 @@
+{
+  "name": "Travel Bird (旅鳥)",
+  "description": "Adopt a digital bird that travels the world based on the energy you give it. Feed it, watch it fly to real locations using Google Maps data, and collect souvenirs.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
